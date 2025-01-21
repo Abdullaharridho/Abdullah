@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
+</head>
+<body class="bg-cover h-screen flex items-center justify-center" style="background-image: url(prau_667082506.jpg);">
+    <div 
+        class="bg-black bg-opacity-50 p-8 rounded-lg shadow-lg w-full max-w-md" 
+        x-data="loginForm"
+    >
+        <h2 class="text-2xl text-white text-center mb-6">Login</h2>
+        <form @submit.prevent="handleLogin">
+            <input type="text" x-model="username" class="w-full p-3 mb-4 bg-transparent border border-gray-500 text-white rounded-md" placeholder="Username" required>
+            <div class="relative mb-4">
+                <input :type="showPassword ? 'text' : 'password'" x-model="password" class="w-full p-3 bg-transparent border border-gray-500 text-white rounded-md" placeholder="Password" required>
+                <button type="button" @click="showPassword = !showPassword" class="absolute right-3 top-3 text-gray-500">
+                    <span x-show="!showPassword">Show</span>
+                    <span x-show="showPassword">Hide</span>
+                </button>
+            </div>
+            <p x-show="errorMessage" class="text-red-500 text-sm mb-4">{{ errorMessage }}</p>
+            <button type="submit" class="w-full p-3 bg-blue-500 text-white rounded-md hover:bg-blue-600">Login</button>
+        </form>
+    </div>
+    <footer class="absolute bottom-0 w-full text-center p-4 bg-black text-white">
+        <p>&copy; Copyright Muhammad Abdullah Arridho</p>
+        <div class="mt-2 space-x-4 flex justify-center">
+            <a href="https://www.facebook.com" target="_blank" class="text-white hover:text-blue-500 flex items-center space-x-2">
+                <i class="fab fa-facebook-f"></i>
+                <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="text-white hover:text-pink-500 flex items-center space-x-2">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" class="text-white hover:text-black flex items-center space-x-2">
+                <i class="fab fa-tiktok"></i>
+                <span>TikTok</span>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+       
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('loginForm', () => ({
+                username: '',
+                password: '',
+                showPassword: false,
+                errorMessage: '',
+                handleLogin() {
+                    if (this.username === 'Abdullah' && this.password === '123') {
+                        window.location.href = 'Home.html'; 
+                    } else {
+                        this.errorMessage = 'Invalid username or password!';
+                    }
+                }
+            }));
+        });
+    </script>
+</body>
+</html>

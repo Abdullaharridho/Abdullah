@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home#Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
+</head>
+<nav class="bg-black bg-opacity-20 shadow-lg fixed top-0 left-0 w-full z-50 border-red-600 py-1" x-data="{ open: false }">
+    <div class="container mx-auto flex items-center justify-between">
+      <div class="text-white text-lg font-sans font-bold flex items-center">
+        <img src="logo pengeja alam.jpg" alt="Pengeja Alam" class="w-12 h-12 mr-1 rounded-full">Pengeja Alam
+      </div>
+      <div class="block lg:hidden">
+        <button class="text-white focus:outline-none" @click="open = !open">
+          <i class="border-2 fas fa-bars w-6 h-6"></i>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:items-center lg:w-auto">
+        <ul class="lg:flex lg:space-x-4">
+          <li><a href="Home.html" class="text-white hover:text-blue-500">Beranda</a></li>
+          <li><a href="Mountain.html" class="text-white hover:text-blue-500">Berita</a></li>
+          <li><a href="Gallery.html" class="text-white hover:text-blue-500">Galleri</a></li>
+          <li><a href="Tentang.html" class="text-white hover:text-blue-500">Tentang</a></li>
+          <li><a href="#" class="text-white hover:text-blue-500">Kontak</a></li>
+          <li><a href="login.html" class="text-white hover:text-blue-500">Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <div :class="{'block': open, 'hidden': !open}" class="lg:hidden bg-black bg-opacity-50 absolute top-0 left-0 w-full h-full z-40">
+      <div class="flex justify-center py-4">
+        <ul class="space-y-6 text-center text-white">
+          <li><a href="Home.html" class="block hover:text-blue-500">Beranda</a></li>
+          <li><a href="Mountain.html" class="block hover:text-blue-500">Berita</a></li>
+          <li><a href="Gallery.html" class="block hover:text-blue-500">Galleri</a></li>
+          <li><a href="Tentang.html" class="block hover:text-blue-500">Tentang</a></li>
+          <li><a href="kontak.html" class="block hover:text-blue-500">Kontak</a></li>
+          <li><a href="login.html" class="block hover:text-blue-500">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<body class="bg-gray-100 leading-normal font-sans tracking-normal">
+    <div class="container mx-auto mt-20">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3
+            gap-4">
+            <div class="bg-white text-black p-6 rounded-lg
+    shadow-md flex items-center">
+                <img src="Lawufb.jpg" alt="hjjvf" class="h-24 w-16 mr-4 object-cover">
+                <div>
+                    <span class="text-sm text-teal-500 font-semibold"> Lawu </span>
+                    <h3 class="font-bold text-lg">Ekspedisi 3265 mdpl</h3>
+                    <p class=" text-gray-500 text-sm">By Pengeja Alam</p>
+                    <p class=" text-blue-500 hover:text-blue-1000 mt-4 text-sm">Lihat Lebih Lengkap →</p>
+                </div>
+            </div>
+            <div class="bg-white text-black p-6 rounded-lg
+    shadow-md flex items-center">
+                <img src="bhutakfb.jpg" alt="hjjvf" class="h-24 w-16 mr-4 object-cover">
+                <div>
+                    <span class="text-sm text-teal-500 font-semibold"> Butak </span>
+                    <h3 class="font-bold text-lg">Ekspedisi 2868 mdpl</h3>
+                    <p class=" text-gray-500 text-sm">By Pengeja Alam</p>
+                    <p class=" text-blue-500 text-sm mt-4">Lihat Lebih Lengkap →</p>
+                </div>
+            </div>
+            <div class="bg-white text-black p-6 rounded-lg
+    shadow-md flex items-center">
+                <img src="ME_lemongan.jpg" alt="hjjvf" class="h-24 w-16 mr-4 object-cover">
+                <div>
+                    <span class="text-sm text-teal-500 font-semibold"> Lemongan </span>
+                    <h3 class="font-bold text-lg">Ekspedisi 1651 mdpl </h3>
+                    <p class=" text-gray-500 text-sm">By Muhammad Abdullah Arridho</p>
+                    <p class=" text-blue-500 text-sm mt-4">Lihat Lebih Lengkap →</p>
+                </div>
+            </div>
+            <div class="bg-white text-black p-6 rounded-lg
+    shadow-md flex items-center">
+                <img src="Me_arjuno.jpg" alt="hjjvf" class="h-24 w-16 mr-4 object-cover">
+                <div>
+                    <span class="text-sm text-teal-500 font-semibold"> Arjuno </span>
+                    <h3 class="font-bold text-lg">Ekspedisi 3339 mdpl</h3>
+                    <p class=" text-gray-500 text-sm">By Muhammad Abdullah Arridho</p>
+                    <a href="#" class=" text-blue-500 text-sm mt-4">Lihat Lebih Lengkap →</a>
+                </div>
+            </div>
+            <div class="bg-white text-black p-6 rounded-lg
+    shadow-md flex items-center">
+                <img src="Kumpulan Manusia Oke.jpeg" alt="hjjvf" class="h-24 w-16 mr-4 object-cover">
+                <div>
+                    <span class="text-sm text-teal-500 font-semibold"> Danau Taman Hidup </span>
+                    <h3 class="font-bold text-lg">Ekspedisi 1973</h3>
+                    <p class=" text-gray-500 text-sm">By Kumpulan Manusia Oke</p>
+                    <p class=" text-blue-500 text-sm mt-4">Lihat Lebih Lengkap →</p>
+                </div>
+            </div>
+            <div class="flex justify-center p-6 border-4 border-gray-400 border-dashed rounded-lg">
+                <div class="text-center">
+                    <span class="text-3xl font-bold text-green-500 text-center">+</span>
+                    <h1 class="text-sm">Tambah Album Baru</h1>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-6 bottom-0 w-full text-center p-4 bg-black text-white">
+            <p>&copy; Copyright Muhammad Abdullah Arridho</p>
+            <div class="mt-2 space-x-4 flex justify-center">
+                <a href="https://www.facebook.com" target="_blank" class="text-white hover:text-blue-500 flex items-center space-x-2">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Ridho</span>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="text-white hover:text-pink-500 flex items-center space-x-2">
+                    <i class="fab fa-instagram"></i>
+                    <span>Ridho5833c</span>
+                </a>
+                <a href="https://www.tiktok.com" target="_blank" class="text-white hover:text-black flex items-center space-x-2">
+                    <i class="fab fa-tiktok"></i>
+                    <span>Ridho_ui</span>
+                </a>
+            </div>
+        </footer>
+</body>
+
+</html>

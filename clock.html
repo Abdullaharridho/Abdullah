@@ -1,0 +1,48 @@
+<!-- resources/views/clock.blade.php -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Clock with Alpine.js</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <style>
+        .clock {
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock" x-data="clock()" x-init="startClock()">
+        <span x-text="time"></span>
+    </div>
+
+    <script>
+        function clock() {
+            return {
+                time: '',
+
+                startClock() {
+                    this.updateTime();
+                    setInterval(() => this.updateTime(), 1000);
+                },
+
+                updateTime() {
+                    const now = new Date();
+                    const hours = String(now.getHours()).padStart(2, '0');
+                    const minutes = String(now.getMinutes()).padStart(2, '0');
+                    const seconds = String(now.getSeconds()).padStart(2, '0');
+                    this.time = `${hours}:${minutes}:${seconds}`;
+                },
+            };
+        }
+    </script>
+</body>
+</html>

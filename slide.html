@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide View</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto py-8">
+        <h1 class="text-3xl font-bold text-center mb-6">Slide Show</h1>
+        <div class="relative w-full overflow-hidden rounded-lg shadow-lg">
+            <div class="swiper-wrapper">
+                <!-- Example Slide -->
+                <div class="swiper-slide">
+                    <div class="relative">
+                        <img src="bg.jpg" alt="Slide Image" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
+                            <h2 class="text-2xl font-bold mb-2">Teks Awal</h2>
+                            <p class="text-lg mb-2">Teks Dua</p>
+                            <span class="text-sm">Teks Tiga</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Duplicate this block for more slides -->
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg">
+                &#x3c;
+            </button>
+            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg">
+                &#x3e;
+            </button>
+        </div>
+
+        <!-- Pagination Dots -->
+        <div class="flex justify-center mt-4">
+            <div class="w-3 h-3 bg-gray-400 rounded-full mx-1"></div>
+            <div class="w-3 h-3 bg-gray-400 rounded-full mx-1"></div>
+            <div class="w-3 h-3 bg-gray-400 rounded-full mx-1"></div>
+        </div>
+    </div>
+
+    <script>
+        // Add simple interactivity using vanilla JavaScript or a library like SwiperJS
+    </script>
+</body>
+</html>
